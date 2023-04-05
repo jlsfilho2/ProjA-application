@@ -1,28 +1,21 @@
 package projA.model;
-import java.util.List;
-
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 import org.hibernate.annotations.Type;
 /*
  * Classe de Organização
  * */
-public class Organization  {
-	
-	@Id
-	@Column
-	@Type(type = "org.hibernate.type.UUIDCharType")
-	String id;
+public class Organization extends ProjAModel  {
+
 	
 	@Column
-	String coreId;
+	String url;
 	
 	@Column
-	String 	identify;
+	String identify;
+	
+	@Column
+	String configurationId;
 	
 	@Column
 	String publicKey;
@@ -33,15 +26,7 @@ public class Organization  {
 	@Column
 	String urlToGetProcess;
 	
-	
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public String getIdentify() {
 		return identify;

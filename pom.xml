@@ -1,12 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ProjA</groupId>
-  <artifactId>ProjA-application</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <properties>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ProjA</groupId>
+	<artifactId>ProjA-application</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<properties>
 		<org.springframework.version>5.3.20</org.springframework.version>
 		<org.springframework.data>2.7.9</org.springframework.data>
+		<org.springframework.security>6.0.0</org.springframework.security>
 		<javax.version>8.0</javax.version>
 		<start-class>projA.infra.Application</start-class>
 		<junit.version>4.11</junit.version>
@@ -36,6 +37,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>${org.springframework.data}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springframework.security}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax</groupId>
